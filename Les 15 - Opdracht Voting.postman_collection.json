@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "95fee2e7-0f6a-46a2-91c3-7c6ef426ec0a",
+		"name": "Les 15 - Opdracht Voting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24308684"
+	},
+	"item": [
+		{
+			"name": "sayHello",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/hello",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sayHello with login",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "appel",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "karel",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/hello",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tellSecret (Admin only)",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "peer",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "ans",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/secret",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"secret"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddVote (Voter + Admin)",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "peer",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "ans",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/votes?party=PVV",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"votes"
+					],
+					"query": [
+						{
+							"key": "party",
+							"value": "PVV"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getVotes",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "peer",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "ans",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/votes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"votes"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
